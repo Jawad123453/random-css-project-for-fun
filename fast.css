@@ -1,0 +1,82 @@
+*{
+  padding:0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+.contaner{
+  width: 100vw;
+  height: 100vh;
+  background-image: url("https://media.istockphoto.com/id/512250305/photo/sky-full-of-stars.jpg?b=1&s=170667a&w=0&k=20&c=bd4eXMrcOdAOfBfIsW5Fthn0Iu4nqRyUSTRPDKoMDhc=");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contaner ul.mainlist{
+  list-style: none;
+}
+.contaner ul.mainlist li a{
+  text-decoration: none;
+  color:white;
+  font-size: 22px;
+  font-weight: bold;
+  background-color: rgb(42, 139, 230);
+  width: 175px;
+  padding:10px 0;
+  text-align: center;
+  display: inline-block;
+  margin: 7px 0;
+  border: none;
+  border-radius: 20px;
+  transition: 0.3s linear;
+  position: relative;
+  z-index: 10;
+}
+.contaner ul.mainlist:hover li a{
+  opacity: 0;
+}
+.contaner ul.mainlist li a:hover{
+  background-color: indianred;
+  transform: scale(1.5);
+  opacity: 1;
+}
+.contaner ul.mainlist li::before{
+  content: attr(data-text);
+  position: absolute;
+  color:white;
+  top:40%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  font-size: 70px;
+  font-weight: bold;
+  pointer-events: none;
+  opacity: 0;
+  transition: 0.3s linear;
+  letter-spacing: 50px;
+}
+.contaner ul.mainlist li::after{
+  content: "";
+  position: absolute;
+  top:65%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  width: 360px;
+  height:150px;
+  background-color: white;
+  border: none;
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 0;
+  transition: 0.3s linear;
+}
+.contaner ul.mainlist li:hover::before{
+  opacity: 0.5;
+  letter-spacing: 5px;
+}
+.contaner ul.mainlist li:hover::after{
+  opacity: 0.5;
+  width: 150px;
+}
